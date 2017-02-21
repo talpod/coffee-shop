@@ -1,0 +1,9 @@
+var num = 025468;
+for (i=0; i < num.length; i++) {
+ if (num[i] % 2 === 0 && num[i++] % 2 === 0)
+ 	{
+num.splice(i, 1, " - ");	
+	}
+}
+
+console.log(num)

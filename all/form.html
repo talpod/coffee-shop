@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<form>
+    Username:
+    <input type="text" id="username" placeholder="5 characters or more">
+    <br> Email:
+    <input type="e-mail" placeholder="yourname@email.com">
+    <br> Password:
+    <input type="password">
+    <br> Repeat password:
+    <input type="password">
+    <br> Phone Number:
+    <input type="number">
+    <br> Country:
+    <input type="text">
+    <br>
+    <button type="button" onclick="submitForm();">Submit</button>
+    <div id="msg"></div>
+</form>
+<script type="text/javascript">
+  function submitForm() {
+    var usernameElement = document.getElementById('username');
+    var username = usernameElement.value;
+    if (username.length < 5) {
+        document.getElementById('msg').innerHTML = "This username is too short. Please use a minimum of 5 characters";
+    } else {
+        alert("Thank you " + username + "!");
+        document.getElementById('msg').innerHTML = " ";
+
+    }
+}
+  function chkPassLength () {
+    var passwordElement = document.getElementById('password');
+    var password = passwordElement.value;
+    if (password.length < 6) {
+        document.getElementById('msg').innerHTML = "The password is too short. Please use a minimum of 6 characters";
+    } else {
+        alert("Password is good");
+        document.getElementById('msg').innerHTML = " ";
+
+    }
+    }
+</script>
+</form>
+</body>
+</html>

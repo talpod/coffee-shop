@@ -1,0 +1,66 @@
+    {
+        "name": "Cow",
+        "weight": 500,
+        "unit": "kg",
+        "habitat": "pasture",
+        "isendangered": "no",
+        "food": [{
+                "name": "grass",
+                "percentage": "90%"
+            },
+            {
+                "name": "weed",
+                "percentage": "10%"
+            }
+        ],
+        "predators": "human",
+        "delicious": "4"
+    }, {
+        "name": "Elephant",
+        "weight": "1200",
+        "unit": "kg",
+        "habitat": "jungle",
+        "isendangered": "yes",
+        "food": "grass",
+        "predators": "none",
+        "delicious": "2"
+    }, {
+        "name": "Grey Wolf",
+        "weight": 200,
+        "unit": "kg",
+        "habitat": "forest",
+        "isendangered": "no",
+        "food": [{
+                "name": "meat",
+                "percentage": "90%"
+            },
+            {
+                "name": "more meat",
+                "percentage": "10%"
+            }
+        ],
+        "predators": "none",
+        "delicious": "1"
+    }
+
+    ],
+    "predators": "none",
+    "delicious": "1"
+    }, {
+        "name": "Squirel",
+        "weight": "0.2",
+        "unit": "kg",
+        "habitat": "trees",
+        "isendangered": "no",
+        "food": [{
+                "name": "nuts",
+                "percentage": "90%"
+            },
+            {
+                "name": "nobody knows",
+                "percentage": "10%"
+            }
+        ],
+        "predators": "fox",
+        "delicious": "2"
+    }

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div id="container"></div>
+
+<script>
+  var contr = document.getElementById("container");
+  contr.innerHTML = "New Content!";
+</script>
+<div id="container"></div>
+<script>
+    var para = document.createElement("p");
+    var textnode = document.createTextNode("Hello world!");
+    para.appendChild(textnode);
+    document.getElementById("container").appendChild(para);
+</script>
+<div id="container"></div>
+<script>
+	var btn = document.createElement("button")
+	var btnText = document.createTextNode("Click Me!");
+	btn.appendChild(btnText);
+	document.getElementById("container").appendChild(btn);
+</script>
+
+<p id="blahP" onmouseover='changeText()';>Spider pig!</p>
+  <script type="text/javascript">
+    var changeText = function() {
+    var newText = document.createTextNode("!");
+    blahP.appendChild(newText);
+    document.getElementById("blahP").appendChild(blahP);
+}
+  </script>
+<p id='para1' onmouseover="eventHandler();" onmouseout="event2();"> Hover Over Me</p>
+<script type="text/javascript">
+var eventHandler = function() {
+    document.getElementById('para1').innerHTML = "Thank You!";
+}
+var event2 = function(){
+	document.getElementById('para1').innerHTML = "Bye!";
+}
+</script>
+<ul id="thelist" onclick="addLi();">
+	<li>List Item</li>
+</ul>
+  <script>
+    function addLi() {
+    var list = document.getElementById('thelist');
+    var nodetext = document.createTextNode("Another List Item");
+    var item = document.createElement('li');
+    item.appendChild(nodetext);
+    list.appendChild(item);
+}
+  </script>
+
+
+  <div id="div1" name="myfavediv" data-info="I'm a div"> </div>
+<script>
+    var attrs = document.getElementById('div1').attributes
+    console.log(attrs.length)  //3
+</script>
+
+<style>
+.reddemo {
+    color: red;
+}
+</style>
+<p id="p1" name="myfavep" data-info="I'm a paragraph"> Hello World</p>
+<script>
+    var para = document.getElementById('p1')
+    var attr = document.createAttribute("class");
+    attr.value = "reddemo";
+    para.attributes.setNamedItem(attr);
+</script>
+
+</body>
+</html>

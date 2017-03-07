@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <meta charset="utf-8">
+    <title>Weather App</title>
+</head>
+<body>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="page-header">
+                <h1>Weather LookApp</i></h1>
+            </div>
+            <form class="search-form">
+                <h3>Search by City</h3>
+                <div class="form-group">
+                    <input type="text" id="city" class="form-control" placeholder="City Name">
+                  </input><br>
+                    <button class="btn btn-primary search-book" type="button">Search</button>
+                </div>
+            </form>
+            <div class="search-results" id="search-results">
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <script src="node_modules/handlebars/dist/handlebars.min.js"></script>
+</body>
+</html>

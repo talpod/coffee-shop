@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+
+<body ng-app="appName">
+<div ng-controller="addTodo">
+    <div>
+        <h1>ToDo List</h1>
+        <input type="text" ng-model="todoInput"></input>
+
+        <input type="button" value="Add"  ng-click="goTodo()">
+    </div>
+    <div>
+        <ul ng-repeat="todo in todo">
+            <li>{{todo}}</li>
+        </ul>
+    </div>
+  </div>
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="app.js"></script>
+    <script src="controller.js"></script>
+    <script src="todoService.js"></script>
+</body>
+
+</html>

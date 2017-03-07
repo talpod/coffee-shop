@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+
+<body ng-app="appName">
+    <ul ng-controller="namesCtrl">
+        <li ng-repeat="name in names | limitTo: 3">{{name.lastname}}, {{name.firstname}}</li>
+        <li ng-repeat="name in names | limitTo: 4 | orderBy: 'firstname'">Just the first name by ABC: {{name.firstname | uppercase}}</li>
+
+    </ul>
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="app.js"></script>
+    <script src="namesCtrl.js"></script>
+    <script src="namesService.js"></script>
+
+</body>
+
+</html>

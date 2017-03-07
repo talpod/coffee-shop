@@ -1,33 +1,57 @@
-var Stack = function(){
-    this.stack = [];
-    this.print = function(){
-      console.log(this.stack);
+var Robot = function() {
+    this.drive = function() {
+        console.log('moving!');
     }
+}
 
-    this.push = function(x){
-      this.stack.push(x);
-    }
+var MurderRobot = function() {
+    Robot.call(this);
 
-    this.isEmpty = function(){
-      return this.stack.length == 0;
+    this.kill = function() {
+        console.log('killing!')
     }
+}
 
-    this.peek = function(){
-      if(!this.isEmpty()){
-        return this.stack[this.stack.length - 1]
-      }
-      return null;
-    }
+var CleaningRobot = function() {
+    Robot.call(this);
 
-    this.pop = function(){
-    if(!this.isEmpty()){
-      return this.stack.pop();
+    this.clean = function() {
+        console.log('cleaning!');
     }
+}
+
+var Animal = function() {
+    this.poop = function() {
+        console.log('pooping everywhere!')
+    }
+}
+
+var Dog = function() {
+    Animal.call(this);
+
+    this.bark = function() {
+        console.log('woof!');
+    }
+}
+
+var Cat = function() {
+    Animal.call(this);
+
+    this.meow = function() {
+        console.log('meow');
+    }
+}
+
+var MurderRobotDog = function () {
+  Robot.call(this);
+  MurderRobot.call(this);
+
+  this.bark = function () {
+    console.log('woof');
   }
 }
-  var myStack = new Stack();
-  var getMin = function () {
-    var numbers = ;
-    console.log(Math.min(...numbers))
 
-  }
+var myBot = new MurderRobot()
+myBot.drive()
+var myDog = new Dog()
+myDog.poop()

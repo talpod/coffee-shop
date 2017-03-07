@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html ng-app="movieApp">
+
+<head>
+    <meta charset="utf-8">
+    <title>Anguflits</title>
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body ng-controller="allMoviesCtrl">
+
+    <div id="myCollection" class="alert alert-info">
+      <h2>Your Movies Collection</h2>
+
+        <br>
+        <div id="remainingBudget"><h4>Budget left: {{budget | currency}}</h4></div>
+
+        <br>
+        <label>  <input class="form-control" type="text" ng-model="mySearch" placeholder="Search by title"> </label>
+        <br>
+
+<div ng-if="!myMovies.length">
+  <h1>Select movies from below to add to your collection!</h1>
+</div>
+        <div class="main">
+            <div class="row">
+                <div class="col-md-3" ng-repeat="movie in myMovies | filter: mySearch track by $index">
+                    <img class="thumbnail" ng-src="{{ movie.cover }}">
+                    <p class="title">
+                    <h3>{{ movie.name }}</h3></p>
+                    <button type="button" class="btn btn-danger" name="remove" ng-click="remove()"> Remove</button>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <div id="allMovies" class="alert alert-info">
+        All Movies
+        <br><br>
+        <label>  <input class="form-control" type="text" ng-model="movieName" placeholder="Search by title"> </label>
+
+        <div class="main">
+            <div class="row">
+                <div class="col-md-4" ng-repeat="movie in movies | filter: movieName">
+                    <img class="thumbnail" ng-src="{{ movie.cover }}">
+                    <p class="title">
+                        <h2>{{ movie.name }}</h2></p>
+                    <p class="price">{{ movie.price | currency }} <button type="button" class="btn btn-success" name="purchase" ng-click="purchase()" ng-click="remainingBudget()"> Purchase</button></p>
+                    <p class="desc">{{ movie.desc }}</p>
+                </div>
+            </div>
+        </div>
+
+<div>
+  <label> <input class="form-control" type="text" ng-model="film" placeholder="Search OMDB" id='film'> </label>
+  <button class='omdb btn-primary' type='button' ng-click=search()>Search</button>
+
+<p ng-bind-html="myHtml">
+
+
+  <!-- <div class="main">
+      <div class="row">
+          <div class="col-md-3" ng-repeat="movie in oMovies | filter: mySearch track by $index">
+              <img class="thumbnail" ng-src="{{ movie.cover }}">
+              <p class="title">
+              <h3>{{ movie.name }}</h3></p>
+          </div>
+      </div>
+  </div> -->
+
+
+</p>
+</div>
+
+
+        <div class="alert alert-warning">
+            <p align=center>
+                <i class="fa fa-paypal fa-3x" aria-hidden="true"></i>
+                <i class="fa fa-cc-amex fa-3x" aria-hidden="true"></i>
+                <i class="fa fa-cc-visa fa-3x " aria-hidden="true"></i>
+
+            </p>
+        </div>
+        <script src="node_modules/angular/angular.min.js"></script>
+        <script src="node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="ng-app.js"></script>
+        <script src="ng-service.js"></script>
+        <script src="myCollectionCtrl.js"></script>
+        <script src="allMoviesCtrl.js"></script>
+</body>
+
+</html>

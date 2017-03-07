@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+
+  <body ng-app="appName">
+    <div ng-controller="OuterController">
+ {{outer}}
+  <div ng-controller="InnerController">
+   {{inner}}
+   <input ng-model="$parent.outer"/>
+   {{$parent.outer}}
+  </div>
+</div>
+
+  <script src="node_modules/angular/angular.js"></script>
+  <script src="app.js"></script>
+  <script src="InnerController.js"></script>
+  <script src="OuterController.js"></script>
+  </body>
+</html>

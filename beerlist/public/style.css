@@ -1,0 +1,24 @@
+.thumbnail {
+  height: 150px;
+  width: 100px;
+}
+.body {
+    background-image: url('http://enchantedmountains.com/files/events/beer_glass.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position:50% 30%;
+}
+.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
+.rating > span {
+  display: inline-block;
+  position: relative;
+  width: 1.1em;
+}
+.rating > span:hover:before,
+.rating > span:hover ~ span:before {
+   content: "\2605";
+   position: absolute;
+}

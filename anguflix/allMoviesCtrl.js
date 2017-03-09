@@ -2,7 +2,7 @@ app.controller('allMoviesCtrl', [
     '$scope',
     '$http',
     function($scope, $http) {
-        $scope.budget = 18;
+        $scope.budget = 100;
         $scope.myMovies = [];
         $scope.movies = [
             {
